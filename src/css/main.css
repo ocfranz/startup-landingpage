@@ -565,7 +565,7 @@ footer a {
 footer div.f-links ul {
   list-style-type: none;
   padding: 0;
-  margin: 20px 0 0 0;
+  margin: 20px 0 20px 0;
 }
 
 footer div.f-links ul li {
@@ -576,5 +576,15 @@ footer div.f-links ul li {
 footer div.f-links ul li a {
   color: #000;
   opacity: 0.6;
+}
+
+footer span {
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+footer span a {
+  opacity: 1;
+  color: #005dff;
 }
 /*# sourceMappingURL=main.css.map */
