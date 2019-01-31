@@ -1,0 +1,32 @@
+#users{
+    @include medium-bg{
+        margin: 0 $paddings*2 0 $paddings*2;
+    }
+
+    @include desktop{
+        margin: 0 $padding-desktop*1.7 ; 
+    }
+    #main-users {
+        border: solid #ebe9e9;
+        border-width: 1px 0;
+        @include medium-bg{
+            
+            display: flex;
+            flex:nowrap;
+            
+        
+        }
+        img {
+            width: 8rem;
+            margin: 2rem auto;
+            display: block;
+            opacity: 0.5;
+            @include medium-bg{
+               display: inline;
+               width: 7em;
+              
+               height: 3em;
+            }
+    }
+}
+}

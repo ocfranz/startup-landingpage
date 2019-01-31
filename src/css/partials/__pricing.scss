@@ -1,0 +1,106 @@
+#pricing{
+    margin: 1em $paddings 0 $paddings;
+    @include medium{
+        margin: 1em $paddings*5 0 $paddings*5;
+    }
+    @include medium-bg{
+        margin: 1em $paddings*4 0 $paddings*4;
+    }
+
+    @include desktop{
+        margin: 1em $padding-desktop*2;
+    }
+    #pricing-bg{
+        clip-path: polygon(100% 49%, 0% 100%, 100% 100%);
+        background-color: #F5F7F9;
+        min-height: 900px;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+
+        @include medium-bg{
+            min-height: 550px;
+        }
+    }
+    .title{
+        text-align: center;
+        margin: 4rem 0 4rem 0;
+    }
+    #p-mainbody{
+
+        @include medium-bg{
+            display: flex;
+            flex:nowrap;
+            margin:0 auto;
+           
+        }
+        .pricing-item{
+            margin:0 25px 40px 25px;
+            background-color: #fff;
+            border-radius: $border-raidus;
+            box-shadow:  0 5px 15px rgba(0, 0, 0, .2);
+
+            @include medium-bg{
+                margin: 0 auto 40px auto;
+            }
+            .p-content{
+                padding: 10px 20px;
+
+                @include medium-bg{
+                    padding: 20px 40px;
+                    margin-right: 20px;
+                }
+                .p-title{
+                    border: solid #fafafa;
+                    border-width: 0 0 1px 0;
+                    padding-bottom: 1rem;
+                    h4{
+                        color: getColor(primary);
+                    }
+                    span.p-price{
+                        font-size: 35px;
+                    }
+    
+                }
+    
+                .p-body{
+                    text-align: center;
+                    ul{
+                        text-align: left;
+                        list-style-type: none;
+                        margin: 1rem  0 ;
+                        padding: 0;
+    
+                        li{
+                            margin:0 0 1rem 0;
+                            span{
+                                img{
+                                    height: 2em;
+                                    display: inline;
+                                    position: absolute;
+                                    margin-top: -5px;
+                                }
+                            }
+                            strong{
+                                display: inline;
+                                margin-left: 40px;
+                                opacity: .7;
+                            }
+                        }
+                    }
+                     
+                }
+                a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 10px 10px;
+                    display: block;
+                    color: #fff;
+                    background-color: getColor(primary);
+                    margin:50px 0 10px 0;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,62 @@
+header {
+    padding:$paddings;
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-areas: "left right";
+    @include medium-bg{
+        padding:$paddings*1.5;
+    }
+
+    @include desktop{
+        padding:$paddings*1.5 $padding-desktop;
+    }
+    #left{
+        grid-area: left;
+
+        a{
+            text-decoration: none;
+            span{
+                color: #FFF;
+                font-weight: bold;
+                font-size: 14px;
+                text-transform: uppercase;
+                @include desktop{
+                    font-size: 16px;
+                }
+            }
+        }
+
+    }
+    #right{
+        grid-area: right;
+        text-align: right;
+
+        ul{
+            list-style-type: none;
+            margin: 0;
+
+            li{
+                display: inline;
+                
+                a{
+                    color: #FFF;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    margin-left:1em;
+                    font-size: 14px;
+                    font-weight: bold;
+                    @include desktop{
+                        font-size: 16px;
+                    }
+                }
+
+                #signup{
+                    background-color: #FFF;
+                    color:getColor(primary);
+                    padding: .5em 1.5em;
+                }
+            }
+        }
+
+    }
+}

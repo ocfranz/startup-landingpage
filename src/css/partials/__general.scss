@@ -1,0 +1,74 @@
+//imports
+@import url('https://fonts.googleapis.com/css?family=Lato');
+//variables
+
+$colors :(
+    primary:#005dff,
+    primary-light:lighten(#005dff, 50%),
+    
+);
+$paddings:25px ;
+$border-raidus:5px;
+$medium: 600px;
+$medium-bg: 850px;
+$desktop:980px;
+
+$padding-desktop:130px;
+//function
+
+
+
+@function getColor($color-name){
+    @return map-get($colors, $color-name );
+}
+//mixins
+@mixin  medium {
+    @media (min-width :$medium)   {
+        @content;
+
+
+
+    }
+}
+
+@mixin medium-bg {
+    @media (min-width :#{$medium-bg}){
+        
+        @content;
+
+    }
+}
+@mixin  desktop {
+    @media (min-width :#{$desktop}){
+        
+        @content;
+
+    }
+}
+
+
+body, html{
+    height: 100%;
+    
+}
+
+body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    overflow-x:hidden;
+    #bg{
+        
+        clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+        background-color: getColor(primary);
+        height: 500px;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+
+        @include desktop{
+            clip-path: polygon(0 0, 100% 0, 100% 57%, 0 90%);
+            height: 700px;
+        }
+    }
+
+}

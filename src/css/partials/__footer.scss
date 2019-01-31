@@ -1,0 +1,31 @@
+footer{
+    margin: 100px $paddings 0 $paddings;
+    padding:20px 0 40px 0;
+    text-align: center;
+
+    a{
+        text-decoration: none;
+        color: #000;
+        opacity: 0.9;
+        
+    }
+    div.f-links{
+        
+        ul{
+            list-style-type: none;
+            padding: 0 ;
+            margin:20px 0 0 0;
+
+            li{
+                display: inline;
+                margin-left: 10px;
+                a{
+                    color: #000;
+                    opacity: 0.6;
+                }
+            }
+
+           
+        }
+    }
+}

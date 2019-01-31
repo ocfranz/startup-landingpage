@@ -1,0 +1,59 @@
+main{
+    color: #FFF;
+    text-align: center;
+    #hero{
+        margin:50px 20px 30px 20px; 
+        @include medium-bg{
+            width: 75%;
+            margin:50px auto 30px auto; 
+        }
+        @include desktop{
+            margin:100px auto 50px auto; 
+        }
+
+        h1{
+            @include desktop{
+                font-size: 2.5em;
+            }
+        }
+        p{
+            font-size: 1.2em;
+            line-height: 1.9rem;
+            opacity: .9;
+            @include desktop{
+                font-size: 1.4em;
+                width: 70%;
+                margin: 0 auto 50px auto;
+            }
+        }
+        a{
+            color:getColor(primary);
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: .8em 1.3em;
+            background-color: getColor(primary-light);
+            font-weight: bold;
+           
+        }
+    }
+
+    #hero-video{
+        background-color: #FFF;
+        height: 200px;
+        margin: 0 $paddings;
+        border-radius: $border-raidus;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        @include medium{
+            height: 300px;
+        }
+        @include medium-bg{
+            margin: 0 $paddings*1.5;
+        }
+        @include desktop{
+            margin:0 $padding-desktop*1.7;
+            height: 450px;
+        }
+    }
+}
